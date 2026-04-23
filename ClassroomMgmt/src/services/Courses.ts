@@ -37,15 +37,23 @@ export async function editCourse(
     });
 }
 export async function createCourse(
-    newCourse: Pick<Course, "name" & "status" & "instructor" & "instructorId" & "students" & "studyUnitIds"  & "trainingIds" >
+    newCourse: Pick<Course, "name" | "status" | "instructorId" | "studentIds" | "studyUnitIds"  | "trainingIds" >
 ): Promise<Course | null>{
- return apiRequest<Course>(`/api/courses`, {
+    const backendCourse: any = {
+        Name: newCourse.name,
+        Status: newCourse.status,
+        InstructorId: newCourse.instructorId ?? null,
+        StudentIds: newCourse.studentIds ?? null,
+        StudyUnitIds: newCourse.studyUnitIds ?? null,
+        TrainingIds: newCourse.trainingIds ?? null,
+    };
+    return apiRequest<Course>(`/api/courses`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(newCourse) 
- });
+        body: JSON.stringify(backendCourse)
+    });
 }
 
 // export async function createCourse(

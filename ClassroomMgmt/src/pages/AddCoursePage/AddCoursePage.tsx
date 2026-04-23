@@ -105,12 +105,12 @@ const AddCoursePage: React.FC = () => {
         studyUnitIds,
         trainingIds,
       } = course;
-    //   console.log("course  instructor here", course.instructor);
+      //   console.log("course  instructor here", course.instructor);
       await createCourse({
         name,
         status,
-        instructor,
-        instructorId,
+        // instructor,
+        // instructorId = 'ewq123',
         students,
         studyUnitIds,
         trainingIds,
