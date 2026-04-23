@@ -81,13 +81,14 @@ const Courses: React.FC = () => {
   /// filter courses based on the selected filters and search text
   const filteredCourses = allCourses.filter((course) => {
     const matchesInstructor =
-      selectedInstructor === "" || course.instructor === selectedInstructor;
+      selectedInstructor ===
+      ""; /* || course.instructor === selectedInstructor */
     const matchesStatus =
       selectedStatus === "" || course.status === selectedStatus;
     const matchesSearch =
       searchText === "" ||
-      course.name.includes(searchText) ||
-      course.instructor.includes(searchText) ||
+      course.name.includes(searchText) /* 
+      course?.instructor?.includes(searchText) || */ ||
       course.location?.includes(searchText) ||
       course.status.includes(searchText);
     return matchesInstructor && matchesStatus && matchesSearch;

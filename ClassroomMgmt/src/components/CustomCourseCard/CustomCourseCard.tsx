@@ -53,7 +53,8 @@ const CustomCourseCard: React.FC<CustomCourseCardProps> = ({
             {translateCourseStatus(course.status)}
           </span>
           <span className="instructor-name">
-            {course.instructor ? course.instructor : "ללא מדריך"}
+            {"ללא מדריך"}
+            {/* {course.instructor ? course.instructor : "ללא מדריך"} */}
           </span>
           <span className="students-number">{course.students.length + 1}</span>
         </div>

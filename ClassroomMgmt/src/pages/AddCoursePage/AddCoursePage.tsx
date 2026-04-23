@@ -96,9 +96,25 @@ const AddCoursePage: React.FC = () => {
       if (course.students) {
         await checkExistingStudents(course.students);
       }
-      const {name, status, instructor, instructorId, students, studyUnitIds, trainingIds} = course;
-      console.log("course  instructor here", course.instructor);
-      await createCourse({name, status, instructor, instructorId, students, studyUnitIds, trainingIds} as Course);
+      const {
+        name,
+        status,
+        instructor,
+        instructorId,
+        students,
+        studyUnitIds,
+        trainingIds,
+      } = course;
+    //   console.log("course  instructor here", course.instructor);
+      await createCourse({
+        name,
+        status,
+        instructor,
+        instructorId,
+        students,
+        studyUnitIds,
+        trainingIds,
+      } as Course);
       navigate(`/${TABS_IDS.COURSES}`);
       // console.log('courseData from add course page', courseData)
       console.log("קורס נשמר בהצלחה");

@@ -120,11 +120,12 @@ const GeneralInfoTab: React.FC<GeneralInfoTabProps> = ({
                         placeholder="בחר מדריך"
                         disabled={!isEditable}
                         options={[
-                            { label: "ללא מדריך", value: "" },
-                            ...instructors.map((inst) => ({
-                                label: `${inst.firstName} ${inst.lastName}`,
-                                value: inst.id,
-                            })),
+                            { label: "ללא מדריך", value: 'ewq123' },
+                            
+                            // ...instructors.map((inst) => ({
+                            //     label: `${inst.firstName} ${inst.lastName}`,
+                            //     value: inst.id,
+                            // })),
                         ]}
                     />
                 </div>

@@ -2,14 +2,14 @@
 services:
   postgres:
     image: postgres:15-alpine
-    container_name: postgres-mfe
+    container_name: postgres
     restart: unless-stopped
     environment:
       - POSTGRES_DB=classroomdb
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - "5433:5433"
+      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -24,7 +24,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.Backend
-    container_name: classroomserver-mfe
+    container_name: classroomserver
     environment:
       # App configuration
       - IP_ADDRESS=0.0.0.0
@@ -48,7 +48,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.Frontend.Dev
-    container_name: classroommgmt-instructor-mfe
+    container_name: classroommgmt-instructor
     ports:
       - "3001:3000"
     volumes:
@@ -75,7 +75,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.Frontend.Dev
-    container_name: classroommgmt-student-mfe
+    container_name: classroommgmt-student
     ports:
       - "3002:3000"
     volumes:

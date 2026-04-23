@@ -21,8 +21,8 @@ function getApiOrigin(): string {
 const port = typeof window !== "undefined" ? window.location.port : "";
 
 export const config: Config = {
-    //  apiUrl: getApiOrigin(),
-    apiUrl: "http://192.168.1.2:5000",
+     apiUrl: getApiOrigin(),
+    // apiUrl: "http://192.168.1.2:5000",
     isStudentBuild:
         process.env.REACT_APP_MICROFRONTEND_NAME === "classroom-student" ||
         port === "3002",
