@@ -1,0 +1,43 @@
+@import "../../styles/colors";
+
+.running-lesson {
+    &--wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .loading,
+    .error {
+        text-align: center;
+        padding: 3rem;
+        font-size: 1.6rem;
+    }
+    .error {
+        color: $red;
+    }
+    &--header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #e0e0e0;
+        .course-title {
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: #001444;
+            margin: 0;
+        }
+    }
+    &--content {
+        width: 100%;
+        .no-lessons {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.6rem;
+            color: #666;
+        }
+    }
+}

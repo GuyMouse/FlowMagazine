@@ -1,0 +1,56 @@
+# Build one MFE variant (instructor or student) via build-arg.
+# Usage: docker build --build-arg MFE_VARIANT=instructor -f Dockerfile.Frontend.MFE .
+#        docker build --build-arg MFE_VARIANT=student -f Dockerfile.Frontend.MFE .
+
+ARG MFE_VARIANT=instructor
+FROM node:18-alpine AS build
+WORKDIR /app
+
+# Copy package files
+COPY ClassroomMgmt/package*.json ./
+RUN npm ci
+
+# Copy source code
+COPY ClassroomMgmt/ ./
+
+# API URL (override at build time if needed)
+ARG REACT_APP_API_URL=http://localhost:5000
+ENV REACT_APP_API_URL=$REACT_APP_API_URL
+
+# Build the selected variant (build:instructor or build:student)
+ARG MFE_VARIANT=instructor
+RUN npm run build:${MFE_VARIANT}
+
+# Production stage with nginx
+FROM nginx:alpine
+WORKDIR /usr/share/nginx/html
+
+ARG MFE_VARIANT=instructor
+ENV MFE_VARIANT=$MFE_VARIANT
+
+# Remove default nginx static assets
+RUN rm -rf ./*
+
+# Copy built assets into /instructor or /student subpath (for MFE host consumption)
+COPY --from=build /app/build-${MFE_VARIANT} /usr/share/nginx/html/${MFE_VARIANT}
+
+# Nginx: serve the MFE at /instructor or /student; redirect root to that path
+RUN set -e; \
+    BP="/${MFE_VARIANT}"; \
+    echo "server { \
+      listen 80; \
+      server_name localhost; \
+      root /usr/share/nginx/html; \
+      index index.html; \
+      location ${BP}/ { \
+        alias /usr/share/nginx/html${BP}/; \
+        try_files \$uri \$uri/ ${BP}/index.html; \
+      } \
+      location / { \
+        return 302 ${BP}/; \
+      } \
+    }" > /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

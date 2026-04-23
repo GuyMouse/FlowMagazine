@@ -1,0 +1,49 @@
+@import "styles/index";
+
+.profile {
+    margin-inline-start: auto;
+
+    &--wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        text-decoration: none;
+        transition: text-shadow 0.2s linear;
+
+        &:hover,
+        &:focus {
+            text-shadow: 0 0 1px #000;
+        }
+
+        span {
+            font-size: 2rem;
+            font-weight: $font-weight-normal;
+            color: $text-secondary;
+        }
+
+        // .image-wrapper {
+        //     border-radius: 200px;
+        //     overflow: hidden;
+
+        //     img {
+        //         display: block;
+        //         width: 3.5rem;
+        //         transition: transform 0.2s linear;
+        //     }
+        // }
+    }
+
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        background-color: #3DADFF;
+
+        span {
+            color: #fff
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.running-lesson--wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.running-lesson .loading,
+.running-lesson .error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.6rem;
+}
+.running-lesson .error {
+  color: #d00;
+}
+.running-lesson--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+.running-lesson--header .course-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #001444;
+  margin: 0;
+}
+.running-lesson--content {
+  width: 100%;
+}
+.running-lesson--content .no-lessons {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.6rem;
+  color: #666;
+}/*# sourceMappingURL=RunningLesson.css.map */

@@ -1,0 +1,8 @@
+.training-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  gap: 5rem;
+  padding: 5rem 4.5rem;
+  width: 100%;
+  overflow-y: auto;
+}

@@ -1,0 +1,45 @@
+.course {
+    display: flex;
+    flex-direction: column;
+    &--wrapper {
+        padding: 2.5rem;
+    }
+    &--head {
+        display: flex;
+        justify-content: space-between;
+        .buttons-container,
+        .actions-buttons {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .buttons-container {
+            gap: 3rem;
+            .export-buttons {
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    right: -1.5rem;
+                    width: 1px;
+                    height: 100%;
+                    background-color: #080844;
+                }
+            }
+        }
+    }
+    &--body {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        // .add-course--tabs {
+        //     display: flex;
+        //     gap: 1rem;
+        //     border-bottom: 1px solid #ccc;
+        // }
+
+        .tab-content {
+            width: 100%;
+        }
+    }
+}

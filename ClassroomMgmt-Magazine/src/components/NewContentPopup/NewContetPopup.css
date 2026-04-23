@@ -1,0 +1,107 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.new-content-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: stretch;
+  background: white;
+  border-radius: 8px;
+  min-height: 500px;
+  padding: 1.5rem 1.5rem;
+  min-width: 400px;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.new-content-popup--header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+.new-content-popup--header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.new-content-popup--header .header-top span {
+  color: #3b3f5f;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+.new-content-popup--header .header-top .btn-close {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+.new-content-popup--header .header-top--search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+.new-content-popup--header .header-top--search .search-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.new-content-popup--body {
+  flex: 1;
+  max-height: 40rem;
+  overflow-y: auto;
+  margin-bottom: 2rem;
+  width: 100%;
+  box-shadow: 0 0 4px 0 #ccc;
+  border-radius: 8px;
+}
+.new-content-popup--body ul.selection-node {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: start;
+}
+.new-content-popup--body ul.selection-node, .new-content-popup--body ul.selection-node > li > ul {
+  padding-inline-start: 2rem;
+}
+.new-content-popup--body ul.selection-node label {
+  font-size: 2rem;
+}
+.new-content-popup--body ul.selection-node input[type=checkbox] {
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+}
+.new-content-popup--actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  width: 100%;
+}
+.new-content-popup--actions button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 38px;
+  background: #fff;
+  box-shadow: 0 0 10px 0 #ccc;
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=NewContetPopup.css.map */

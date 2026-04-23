@@ -1,0 +1,16 @@
+.tab-button {
+    border: none;
+    font-size: 1.6rem;
+    background: none;
+    padding: 1rem 2rem;
+    border: 1px solid #ddd;
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: none;
+    transition: border-color 0.2s linear;
+    cursor: pointer;
+    &:focus,
+    &:hover,
+    &.active {
+        border-color: #000;
+    }
+}

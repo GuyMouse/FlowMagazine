@@ -1,0 +1,145 @@
+@import "styles/index";
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: url(/assets/images/login_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 2rem;
+
+    &--wrapper {
+        position: relative;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 47.26%, rgba(153, 153, 153, 0) 100%);
+        backdrop-filter: blur(21.65px);
+        padding: 5rem 5rem 2rem;
+        overflow: hidden;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 10px;
+            border: 1px solid #fff;
+            -webkit-mask-image: linear-gradient(to bottom, black 0%, black 12%, transparent 35%);
+            mask-image: linear-gradient(to bottom, black 0%, black 12%, transparent 35%);
+            -webkit-mask-composite: destination-in;
+            mask-composite: intersect;
+            pointer-events: none;
+            z-index: 1;
+        }
+    }
+
+    &--container {
+        justify-self: center;
+        height: 100%;
+
+        &>div {
+            width: 100%;
+        }
+    }
+
+    .logo-wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        gap: 5rem;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 6rem;
+            background-color: rgba(76, 76, 76, 0.33);
+            align-self: center;
+            order: 1;
+        }
+
+        .logo {
+            width: 5rem;
+            height: 100%;
+            align-self: center;
+            order: 0;
+        }
+    }
+
+    h1,
+    h2 {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 8.4rem;
+        color: $black;
+        font-weight: $font-weight-normal;
+        text-align: center;
+        order: 2;
+    }
+
+    h2 {
+        font-size: $font-size-base;
+    }
+
+    .login-fields {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 3rem;
+
+        .text-fields {
+            .text-field-wrapper {
+                &:not(:last-child) {
+                    margin-bottom: 3rem;
+                }
+
+                &:last-child {
+                    margin-bottom: 1rem;
+                }
+
+                label {
+                    font-size: $font-size-xsm;
+                }
+            }
+        }
+
+        .header {}
+
+        .login-help {
+            position: relative;
+            text-align: start;
+
+            .forgot-password {
+                display: inline-block;
+                user-select: none;
+                cursor: pointer;
+                font-size: $font-size-xsm;
+                transition: color 0.2s linear;
+
+                &:hover,
+                &:focus {
+                    color: #fff;
+                }
+            }
+
+            .forgot-hint {
+                position: absolute;
+                top: 100%;
+                text-align: starat;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .buttons-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5%;
+        // width: 35%;
+    }
+
+}

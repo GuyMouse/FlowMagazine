@@ -1,0 +1,98 @@
+.answer-item {
+    counter-increment: hebrew-counter;
+    width: 100%;
+    list-style-position: inside;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0 #ccc;
+    padding: 2rem;
+    &.correct-answer {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        .input-container {
+            background-color: rgba(94, 190, 109, 0.25);
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+        .correct-answer-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+            svg path {
+                stroke: #5ebe6d;
+            }
+            span {
+                font-family: "Noto Sans";
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
+        }
+    }
+    &:not(.correct-answer) .input-wrapper:after {
+        content: "אפשרות " counter(hebrew-counter, hebrew) " ";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translate(0, -50%);
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #858585;
+    }
+    &:not(.correct-answer) .input-wrapper:has(input:not(:placeholder-shown))::after {
+        display: none;
+    }
+    &--wrapper {
+        display: inline-flex;
+        align-items: center;
+        gap: 2rem;
+        width: 100%;
+        .input-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            width: 100%;
+            &:before {
+                content: counter(hebrew-counter, hebrew) " ";
+                display: inline-block;
+                font-size: 3rem;
+                font-weight: 400;
+                color: #224687;
+            }
+            .input-wrapper {
+                position: relative;
+                width: 100%;
+            }
+            // }
+            input.answer-input {
+                display: block;
+                width: 100%;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 1.8rem;
+                padding: 1rem;
+                &::placeholder {
+                    color: #858585;
+                }
+            }
+        }
+        .button-wrapper {
+            button {
+                border: 0;
+                padding: 0;
+                background-color: unset;
+                cursor: pointer;
+                &:hover,
+                &:focus {
+                }
+                svg {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+@import "styles/index";
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    border-bottom: 1px solid $spindle;
+    &--wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10rem;
+        padding: 2rem;
+    }
+
+    .logo {
+        width: 10rem;
+        margin: 0 2rem;
+    }
+
+    &-tabs {
+        &--wrapper {
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
+    }
+
+    .navbar-option {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: #000;
+        font-size: $font-size-base;
+        font-weight: $font-weight-normal;
+        text-decoration: none;
+        cursor: pointer;
+        text-shadow: none;
+        transition:
+            text-shadow 0.2s linear,
+            color 0.2s linear;
+
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 0;
+            height: 2px;
+            transform: translate(-5%, 0);
+            background: linear-gradient(to right, #2979ff, #224687);
+            opacity: 0;
+            transition:
+                transform 0.2s linear,
+                width 0.2s linear,
+                opacity 0.2s linear;
+        }
+
+        &:hover,
+        &:focus,
+        &.current {
+            color: $mine-shaft;
+
+            &:before {
+                opacity: 1;
+                width: 110%;
+                // transform: translate(-5%, 0);
+            }
+        }
+
+        svg {
+            display: block;
+        }
+    }
+}

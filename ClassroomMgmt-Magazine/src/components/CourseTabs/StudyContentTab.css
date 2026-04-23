@@ -1,0 +1,44 @@
+.study-content-tab {
+  padding: 2rem;
+}
+.study-content-tab .tab-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.study-content-tab .content-actions {
+  display: flex;
+  direction: rtl;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.study-content-tab .content-actions .search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.study-content-tab .content-actions .search-bar .search {
+  height: 4.5rem;
+  color: #000;
+  text-align: right;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 15px;
+  width: 24rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.study-content-tab .content-actions .search-bar .search-icon {
+  position: absolute;
+  left: 1rem;
+  width: 2rem;
+  height: 2rem;
+}
+.study-content-tab .content-area {
+  width: 100%;
+}/*# sourceMappingURL=StudyContentTab.css.map */

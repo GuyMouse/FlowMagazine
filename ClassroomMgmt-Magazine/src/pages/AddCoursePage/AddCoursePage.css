@@ -1,0 +1,39 @@
+.course {
+  display: flex;
+  flex-direction: column;
+}
+.course--wrapper {
+  padding: 2.5rem;
+}
+.course--head {
+  display: flex;
+  justify-content: space-between;
+}
+.course--head .buttons-container,
+.course--head .actions-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.course--head .buttons-container {
+  gap: 3rem;
+}
+.course--head .buttons-container .export-buttons {
+  position: relative;
+}
+.course--head .buttons-container .export-buttons:before {
+  content: "";
+  position: absolute;
+  right: -1.5rem;
+  width: 1px;
+  height: 100%;
+  background-color: #080844;
+}
+.course--body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.course--body .tab-content {
+  width: 100%;
+}/*# sourceMappingURL=AddCoursePage.css.map */

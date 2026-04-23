@@ -1,0 +1,13 @@
+export { MainPage } from "./MainPage";
+export { Courses } from "./Courses";
+export { CoursePage } from "./CoursePage";
+export { Login } from "./Login";
+// export { Trainings } from "./Trainings";
+export { SystemManagement } from "./SystemManagement";
+// export { ContentManagement } from "./ContentManagement";
+export { ApprenticeFile } from "./ApprenticeFile";
+export { AddCoursePage } from "./AddCoursePage";
+export { ContentBuilder } from "./ContentBuilder";
+export { TrainingPage } from "./TrainingPage";
+export { StudentLogin } from "./StudentLogin";
+export { RunningLesson } from "./RunningLesson";

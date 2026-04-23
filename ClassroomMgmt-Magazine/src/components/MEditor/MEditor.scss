@@ -1,0 +1,79 @@
+.wrapper {
+    direction: rtl;
+}
+
+.tools-wrapper {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    justify-content: flex-start;
+    // gap: 10px;
+    align-items: stretch;
+    align-self: stretch;
+    // border: 1px solid #f0f0f0 !important;
+
+    background-color: #f2f4f7 !important;
+
+    padding: 0rem 1.6rem !important;
+
+    .rdw-dropdown-carettoopen {
+        display: none;
+    }
+
+    .rdw-option-wrapper,
+    .rdw-dropdown-wrapper {
+        background-color: #f2f4f7 !important;
+        // border: 1px solid #000!important;
+        height: 2rem;
+        padding: 1rem;
+    }
+}
+
+.rdw-inline-wrapper,
+.rdw-fontsize-wrapper,
+.rdw-colorpicker-wrapper,
+.rdw-text-align-wrapper,
+.rdw-list-wrapper,
+.rdw-image-wrapper,
+.rdw-fontfamily-wrapper {
+    // margin: 0 !important;
+    height: 100%;
+    //  display: flex;
+    border-left: 1px solid #e3e5e8 !important;
+    // align-items: center;
+    padding: 8px;
+}
+
+.editor {
+    height: 30rem;
+    color: #000;
+    line-height: 1.2;
+    background-color: #fff;
+    text-align: right;
+    direction: rtl;
+    font-family: "Noto Sans", sans-serif !important;
+    // border: 1px solid #f0f0f0 !important;
+    // border-top: none !important;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+
+    .public-DraftStyleDefault-ltr {
+        text-align: right;
+        direction: rtl;
+    }
+
+    .rdw-image-alignment {
+        float: left !important;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        width: 35% !important;
+        display: block;
+
+        img {
+            width: 100% !important;
+            height: auto;
+
+            display: block;
+        }
+    }
+}

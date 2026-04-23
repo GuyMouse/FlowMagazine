@@ -1,0 +1,117 @@
+.content-tree {
+  border-radius: 5px;
+  border: 1px solid #b0b0b0;
+  width: 20%;
+}
+.content-tree--wrapper {
+  font-size: 1.2rem;
+  color: #224687;
+  background-color: #fdfdfd;
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  height: 100%;
+}
+.content-tree--wrapper h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: start;
+}
+.content-tree--wrapper .tree-node {
+  margin: 5px 0;
+  width: 100%;
+}
+.content-tree--wrapper .tree-node .node {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+  border-radius: 2px;
+  font-size: 1.6rem;
+  padding: 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.content-tree--wrapper .tree-node .node.has-children:has(.arrow.left) ~ .child {
+  height: 0;
+  overflow: hidden;
+}
+.content-tree--wrapper .tree-node .node .arrow {
+  display: inline-block;
+  transition: color 0.2s linear, transform 0.3s ease;
+}
+.content-tree--wrapper .tree-node .node .arrow:hover svg path, .content-tree--wrapper .tree-node .node .arrow:focus svg path {
+  fill: #000;
+}
+.content-tree--wrapper .tree-node .node .arrow.down {
+  transform: rotate(-90deg);
+}
+.content-tree--wrapper .tree-node .node .arrow svg {
+  display: block;
+}
+.content-tree--wrapper .tree-node .node .arrow svg path {
+  fill: #ddd;
+  transition: fill 0.2s linear;
+}
+.content-tree--wrapper .tree-node .node:hover {
+  background-color: #eef2ff;
+  font-weight: bold;
+}
+.content-tree--wrapper .tree-node .node.selected {
+  background-color: #dee8ff;
+  font-weight: bold;
+}
+.content-tree--wrapper .tree-node .node:hover .tree-node--delete-button {
+  opacity: 1;
+}
+.content-tree--wrapper .tree-node .node-label {
+  margin-inline-end: auto;
+}
+.content-tree--wrapper .tree-node--delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.2s, fill 0.2s;
+  border-radius: 4px;
+}
+.content-tree--wrapper .tree-node--delete-button:hover svg {
+  fill: #ef5350;
+}
+.content-tree--wrapper .tree-node--delete-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #d32f2f;
+}
+.content-tree--wrapper .tree-node .child {
+  margin-right: 25px;
+  color: black;
+  font-weight: 500;
+}
+.content-tree-nodes {
+  max-height: 50rem;
+  overflow: auto;
+  padding-inline-end: 1rem;
+  direction: ltr;
+}
+.content-tree-nodes * {
+  direction: rtl;
+}
+.content-tree-nodes::-webkit-scrollbar {
+  width: 10px;
+}
+.content-tree-nodes::-webkit-scrollbar-track {
+  background: #fff;
+}
+.content-tree-nodes::-webkit-scrollbar-thumb {
+  background: #e3e3e3;
+  border-radius: 10px;
+}
+.content-tree-nodes::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}/*# sourceMappingURL=TreeView.css.map */

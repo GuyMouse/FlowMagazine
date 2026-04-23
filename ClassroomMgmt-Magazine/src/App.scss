@@ -1,0 +1,39 @@
+@use "styles/colors" as *;
+@import "styles/index";
+
+html,
+body,
+#root,
+.App {
+    height: 100%;
+}
+
+html,
+body {
+    font-size: 10px;
+    margin: 0;
+}
+
+html[lang="he"] {
+    direction: rtl;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+    text-align: center;
+    background-color: $athens-gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 10px;
+}

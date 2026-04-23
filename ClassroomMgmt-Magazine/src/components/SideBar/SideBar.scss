@@ -1,0 +1,53 @@
+@import "styles/index";
+$side_bar_width: 45vw;
+
+.sidebar-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(#f2f2f5, 0.8);
+	z-index: 1000;
+	.sidebar-content {
+		background-color: white;
+		width: $side_bar_width;
+		position: fixed;
+		right: 0;
+		top: 0;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		animation: slide-in-from-right 0.3s ease-out;
+		box-shadow: 0px 0px 10px 0px #ccc;
+		.sidebar-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: $font-size-base;
+			width: 100%;
+			height: 6rem;
+			padding: 0 2.4rem;
+			border-bottom: 1px solid $spindle;
+			.close {
+				cursor: pointer;
+				&:hover {
+					font-weight: $font-weight-medium;
+				}
+			}
+		}
+	}
+}
+
+@keyframes slide-in-from-right {
+	from {
+		right: -$side_bar_width;
+		opacity: 0;
+	}
+	to {
+		right: 0;
+		opacity: 1;
+	}
+}

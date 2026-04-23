@@ -1,0 +1,98 @@
+.courses-page {
+    &--wrapper {
+        padding: 2rem 3rem;
+
+        .grey-line {
+            margin: 3rem 0;
+            height: 1px;
+            background-color: #aaa;
+            opacity: 0.3;
+        }
+
+        .courses-view-filter {
+            display: flex;
+            align-items: stretch;
+            justify-self: flex-start;
+            border: 1px solid #001444;
+            border-radius: 1rem;
+            box-shadow: 0 0 4px 0 rgba(0, 20, 68, 0.5);
+            overflow: hidden;
+
+            .button-wrapper {
+                button {
+                    height: 100%;
+                    border-radius: unset;
+                    box-shadow: unset;
+                    background-color: #fff;
+                    padding: 1.5rem;
+
+                    &:active {
+                        transform: unset;
+                    }
+
+                    &:hover,
+                    &.active {
+                        background-color: #001444;
+
+                        svg path {
+                            fill: #fff;
+                            fill-opacity: 1;
+                        }
+                    }
+
+                    svg {
+                        display: block;
+                        width: 2rem;
+                        height: 100%;
+
+                        path {
+                            // fill-opacity: 1;
+                            transition:
+                                fill-opacity 0.2s linear,
+                                fill 0.2s linear;
+                        }
+                    }
+                }
+            }
+        }
+
+        .courses {
+            gap: 3rem;
+            padding:3rem 0;
+            margin: 4rem 0;
+            width: 100%;
+           
+
+            &.has-cards {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+            }
+        }
+
+        // course enter page (after clicking כניסה לקורס)
+        .course-run-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+
+            .course-run-title {
+                margin: 0;
+                font-size: 2.2rem;
+                color: #3b3f5f;
+            }
+        }
+
+        .grid-actions {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .grid-message {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #7a8ba8;
+        }
+    }
+}

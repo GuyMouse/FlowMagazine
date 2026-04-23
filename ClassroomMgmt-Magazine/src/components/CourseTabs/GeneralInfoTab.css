@@ -1,0 +1,30 @@
+.general-info-tab .tab-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.general-info-tab .form-row {
+  display: flex;
+  align-items: center;
+}
+.general-info-tab .form-row:has(.text-field input[required]) .form-label {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.general-info-tab .form-row:has(.text-field input[required]) .form-label:before {
+  content: "*";
+  color: #d00;
+}
+.general-info-tab .form-row .form-label {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #224687;
+  width: 10%;
+}
+.general-info-tab .form-row input {
+  border: 1px solid #ddd;
+}
+.general-info-tab .form-row .text-field {
+  width: 90%;
+}/*# sourceMappingURL=GeneralInfoTab.css.map */

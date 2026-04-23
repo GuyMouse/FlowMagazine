@@ -1,0 +1,17 @@
+.system-management {
+    &--wrapper {
+    }
+    &--tabs {
+        &-wrapper {
+            .tab {
+                &--wrapper {
+                    button {
+                        &.active {
+                            background-color: red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

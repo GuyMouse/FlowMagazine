@@ -1,0 +1,99 @@
+@charset "UTF-8";
+.answer-item {
+  counter-increment: hebrew-counter;
+  width: 100%;
+  list-style-position: inside;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0 #ccc;
+  padding: 2rem;
+}
+.answer-item.correct-answer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.answer-item.correct-answer .input-container {
+  background-color: rgba(94, 190, 109, 0.25);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.answer-item.correct-answer .correct-answer-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.answer-item.correct-answer .correct-answer-indicator svg path {
+  stroke: #5ebe6d;
+}
+.answer-item.correct-answer .correct-answer-indicator span {
+  font-family: "Noto Sans";
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.answer-item:not(.correct-answer) .input-wrapper:after {
+  content: "אפשרות " counter(hebrew-counter, hebrew) " ";
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translate(0, -50%);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #858585;
+}
+.answer-item:not(.correct-answer) .input-wrapper:has(input:not(:-moz-placeholder))::after {
+  display: none;
+}
+.answer-item:not(.correct-answer) .input-wrapper:has(input:not(:placeholder-shown))::after {
+  display: none;
+}
+.answer-item--wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+.answer-item--wrapper .input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+.answer-item--wrapper .input-container:before {
+  content: counter(hebrew-counter, hebrew) " ";
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #224687;
+}
+.answer-item--wrapper .input-container .input-wrapper {
+  position: relative;
+  width: 100%;
+}
+.answer-item--wrapper .input-container input.answer-input {
+  display: block;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  padding: 1rem;
+}
+.answer-item--wrapper .input-container input.answer-input::-moz-placeholder {
+  color: #858585;
+}
+.answer-item--wrapper .input-container input.answer-input::placeholder {
+  color: #858585;
+}
+.answer-item--wrapper .button-wrapper button {
+  border: 0;
+  padding: 0;
+  background-color: unset;
+  cursor: pointer;
+}
+.answer-item--wrapper .button-wrapper button svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=AddMultiAnswer.css.map */

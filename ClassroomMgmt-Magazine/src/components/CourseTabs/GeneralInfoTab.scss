@@ -1,0 +1,40 @@
+.general-info-tab {
+    //   padding: 2rem;
+    .tab-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .form-row {
+        display: flex;
+        align-items: center;
+        &:has(.text-field input[required]) .form-label {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            &:before {
+                content: "*";
+                color: #d00;
+            }
+        }
+        .form-label {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #224687;
+            width: 10%;
+        }
+        input {
+            border: 1px solid #ddd;
+        }
+        // select {
+        //     border: unset;
+        //     width: 15rem;
+        //     &:focus{
+        //         outline: unset;
+        //     }
+        // }
+        .text-field {
+            width: 90%;
+        }
+    }
+}

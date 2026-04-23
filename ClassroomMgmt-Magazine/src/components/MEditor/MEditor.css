@@ -1,0 +1,63 @@
+.wrapper {
+  direction: rtl;
+}
+
+.tools-wrapper {
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: stretch;
+  background-color: #f2f4f7 !important;
+  padding: 0rem 1.6rem !important;
+}
+.tools-wrapper .rdw-dropdown-carettoopen {
+  display: none;
+}
+.tools-wrapper .rdw-option-wrapper,
+.tools-wrapper .rdw-dropdown-wrapper {
+  background-color: #f2f4f7 !important;
+  height: 2rem;
+  padding: 1rem;
+}
+
+.rdw-inline-wrapper,
+.rdw-fontsize-wrapper,
+.rdw-colorpicker-wrapper,
+.rdw-text-align-wrapper,
+.rdw-list-wrapper,
+.rdw-image-wrapper,
+.rdw-fontfamily-wrapper {
+  height: 100%;
+  border-left: 1px solid #e3e5e8 !important;
+  padding: 8px;
+}
+
+.editor {
+  height: 30rem;
+  color: #000;
+  line-height: 1.2;
+  background-color: #fff;
+  text-align: right;
+  direction: rtl;
+  font-family: "Noto Sans", sans-serif !important;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+}
+.editor .public-DraftStyleDefault-ltr {
+  text-align: right;
+  direction: rtl;
+}
+.editor .rdw-image-alignment {
+  float: left !important;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  width: 35% !important;
+  display: block;
+}
+.editor .rdw-image-alignment img {
+  width: 100% !important;
+  height: auto;
+  display: block;
+}/*# sourceMappingURL=MEditor.css.map */

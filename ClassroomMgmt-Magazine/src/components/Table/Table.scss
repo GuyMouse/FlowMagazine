@@ -1,0 +1,125 @@
+@import "styles/index";
+
+.table-wrapper {
+    border-radius: 10px;
+    border: 1px solid hsl(210, 29%, 78%);
+    width: 100%;
+    padding: 0 1rem 1rem;
+    max-height: 76vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    .table {
+        table-layout: auto;
+        border-collapse: collapse;
+        width: 100%;
+        &.no-border {
+            border: none;
+        }
+        tbody:has(input[type="checkbox"]) > tr > td:first-child {
+            width: 4rem;
+        }
+        tbody:has(input[type="checkbox"]) > tr > td:first-child,
+        thead:has(input[type="checkbox"]) > tr:first-child > th:first-child {
+            padding: 2rem 0;
+        }
+        tbody:not(:has(input[type="checkbox"])) > tr > td:first-child,
+        thead:not(:has(input[type="checkbox"])) > tr:first-child > th:first-child {
+            padding: 1rem 1rem 1rem 30px;
+        }
+        tbody:not(:has(input[type="checkbox"])) {
+            counter-reset: cellNumbers;
+            tr:has(.cell) {
+                position: relative;
+                counter-increment: cellNumbers;
+                &:after {
+                    content: counter(cellNumbers);
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    font-size: $font-size-sm;
+                }
+            }
+        }
+        tbody tr:not(.no-hover):hover {
+            background: $athens-gray;
+        }
+        tbody > tr.no-hover > td:not(:last-child) > div {
+            padding-inline-end: 2rem;
+        }
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background-color: white;
+            box-shadow: 0 1px 0 0 $spindle;
+        }
+        td,
+        th {
+            border: none;
+            text-align: start;
+            font-size: $font-size-sm;
+            font-weight: $font-weight-normal;
+            word-wrap: break-word;
+            white-space: normal;
+            &:has(input[type="checkbox"]) span {
+                transition:
+                    background-color 0.3s ease,
+                    color 0.3s ease,
+                    transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+                &:hover,
+                &:focus {
+                    color: $bay-of-many;
+                }
+            }
+        }
+        th {
+            color: $bay-of-many;
+        }
+        .buttons {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20%;
+            padding: 1.5rem;
+            .action-button {
+                cursor: pointer;
+                &.refresh {
+                    align-self: end;
+                    border: 0;
+                    background-color: unset;
+                    svg {
+                        transform-origin: center;
+                        transition: transform 0.2s linear;
+                    }
+                    &:hover,
+                    &:focus {
+                        svg {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+
+        .station {
+            width: 20rem;
+            .text-field select {
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+                background-repeat: no-repeat;
+                background-position: right 10px center;
+                background-size: 16px 16px;
+                padding-right: 3rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+        .text-field__input {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+@import "styles/index";
+
+.credits {
+    &--wrapper {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        .flow-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -2.5rem;
+                background-color: #e2e2e2;
+                width: 1px;
+                height: 100%;
+            }
+
+            span.app-name {
+                color: #001444;
+                font-size: 3.6rem;
+                font-weight: $font-weight-bold;
+                text-transform: uppercase;
+            }
+        }
+
+        .shaham-logo {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            // gap: 2px;
+
+            
+            span {
+
+                white-space: nowrap;
+                // font-family: "Omer";
+                flex: 3;
+
+                font-family: 'Noto Sans';
+                line-height: 1em;
+                font-size: 1rem;
+                color: #000000;
+                font-weight: 500;
+
+            }
+
+            img {
+                flex: 1;
+
+                // position: absolute;
+                // display: inline-block;
+                //width: 3.5rem;
+                // top: 0;
+                // left: 0;
+            }
+        }
+
+        .app-logo {
+            img {
+                display: block;
+                width: 6rem;
+                object-fit: contain;
+            }
+        }
+    }
+}

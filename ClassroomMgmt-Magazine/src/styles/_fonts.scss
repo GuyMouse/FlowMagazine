@@ -1,0 +1,90 @@
+// Font sizes
+$font-size-base: 2.4rem; // Default font size
+$font-size-xsm: 1.8rem; // Extra Small font size
+$font-size-sm: 2rem; // Small font size
+$font-size-lg: 2.6rem; // Large font size
+$font-size-xl: 2.8rem; // Extra Large font size
+
+// Font weights
+$font-weight-small: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../assets/fonts/NotoSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../assets/fonts/NotoSans-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../assets/fonts/NotoSans-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../assets/fonts/NotoSans-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../assets/fonts/NotoSans-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../assets/fonts/NotoSans-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../assets/fonts/NotoSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../assets/fonts/NotoSans-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../assets/fonts/NotoSans-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    src: url("../assets/fonts/NotoSans-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+}
+
+//@font-face {
+//  font-family: 'Noto Sans';
+//  src: url('../assets/fonts/NotoSans-ExtraLightItalic.ttf') format('woff2'),
+//  url('../assets/fonts/NotoSans-ExtraLightItalic.ttf') format('woff');
+//  font-weight: 200;
+//  font-style: italic;
+//}

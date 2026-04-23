@@ -1,0 +1,41 @@
+@import "../../styles/colors.scss";
+
+.station-info {
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid #080844;
+    padding: 0 2rem 2rem;
+    &--wrapper {
+    }
+    &--header {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: $text-secondary;
+        }
+        .active-station {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .student-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 2rem;
+            font-weight: 700;
+            color: $text-secondary;
+            &--role {
+                font-size: 1.6rem;
+                font-weight: 400;
+                color: #fff;
+                border-radius: 1rem;
+                padding: 0.5rem;
+                background-color: #3dadff;
+            }
+        }
+    }
+}

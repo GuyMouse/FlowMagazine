@@ -1,0 +1,78 @@
+{
+    "course": {
+        "name": "שם הקורס",
+        "status": "סטטוס",
+        "status_not_started": "טרם החל",
+        "status_in_progress": "בעבודה",
+        "status_completed": "הסתיים",
+        "instructor": "מדריך",
+        "instructor_name": "שם המדריך",
+        "start_training": "התחל אימון",
+        "stop_training": "עצור אימון",
+        "tabs": {
+            "course_details": "פרטי הקורס",
+            "students": "סטודנטים"
+        },
+        "new_course": "הוספת קורס חדש",
+        "students": {
+            "firstname": "שם פרטי",
+            "lastname": "שם משפחה",
+            "id": "תעודת זהות",
+            "station": "תחנה #",
+            "grade": "ציון",
+            "actions": "פעולות",
+            "coursename": "שם קורס",
+            "status": "סטטוס",
+            "basename": "בסיס",
+            "instructor": "מדריך",
+            "studentscount": "מספר תלמידים"
+        },
+        "add_or_edit": "הוסף / ערוך קורס",
+        "alerts": {
+            "updated": "הקורס עודכן בהצלחה.",
+            "updated_failed": "נכשל בעדכון הקורס. אנא נסה שוב.",
+            "are_you_sure_start_training": "<p>האם אתה בטוח שברצונך <strong>להתחיל</strong> אימון?</p>",
+            "training_started": "האימון התחיל!",
+            "training_start_failed": "נכשל בהתחלת האימון",
+            "are_you_sure_stop_training": "<p>האם אתה בטוח שברצונך <strong>לעצור</strong> אימון?</p>",
+            "training_stopped": "האימון נעצר",
+            "training_stop_failed": "נכשל בעצירת האימון"
+        }
+    },
+    "training": {
+        "add_or_edit": "הוסף / ערוך אימון",
+        "delete_training": "<p>האם אתה בטוח שברצונך <strong>למחוק</strong> אימון?</p>",
+        "training_name": "שם האימון",
+        "training_location": "מיקום האימון",
+        "new_training": "אימון חדש",
+        "alerts": {
+            "updated": "האימון עודכן בהצלחה.",
+            "updated_failed": "נכשל בעדכון האימון. אנא נסה שוב.",
+            "delete": "האימון נמחק בהצלחה.",
+            "delete_failed": "נכשל במחיקת האימון. אנא נסה שוב."
+        }
+    },
+    "login": {
+        "user_name": "שם משתמש",
+        "password": "סיסמה",
+        "forgot_password": "שכחת סיסמה?",
+        "password_hint": "רמז לסיסמה: כינוי ילדות",
+        "login": "התחבר",
+        "one_incorrect": "שם המשתמש או הסיסמה שגויים",
+        "close": "סגור"
+    },
+    "missing_data": "נתונים חסרים",
+    "delete": "מחק",
+    "edit": "ערוך",
+    "save": "שמור",
+    "add": "הוסף",
+    "cancel": "בטל",
+    "yes": "כן",
+    "no": "לא",
+    "select_all": "בחר הכל",
+    "alerts": {
+        "something_went_wrong": "משהו השתבש!",
+        "success": "הפעולה הצליחה!",
+        "failed": "הפעולה נכשלה."
+    }
+}

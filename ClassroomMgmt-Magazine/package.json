@@ -1,0 +1,89 @@
+{
+  "name": "training-management",
+  "version": "0.1.0",
+  "description": "Flow Classroom Training Management System",
+  "author": "FlowClassroom",
+  "private": true,
+  "main": "electron/main.js",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@microsoft/signalr": "^10.0.0",
+    "@mui/material": "^6.5.0",
+    "@reduxjs/toolkit": "^2.11.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/draft-js": "^0.11.20",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/react-draft-wysiwyg": "^1.13.9",
+    "chart.js": "^4.5.1",
+    "classnames": "^2.5.1",
+    "draft-js": "^0.11.7",
+    "html2canvas": "^1.4.1",
+    "i18next": "^23.14.0",
+    "i18next-http-backend": "^2.6.1",
+    "jspdf": "^4.0.0",
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^18.3.1",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-i18next": "^15.0.1",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.26.1",
+    "react-scripts": "5.0.1",
+    "react-simple-wysiwyg": "^3.4.1",
+    "sweetalert2": "^11.14.0",
+    "sweetalert2-react-content": "^5.0.7",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:instructor": "cross-env BUILD_PATH=build-instructor PUBLIC_URL=/instructor REACT_APP_BASE_PATH=/instructor REACT_APP_API_URL=http://192.168.1.42:5000 REACT_APP_MICROFRONTEND_NAME=classroom-instructor react-scripts build && node scripts/postbuild-microfrontend.js build-instructor /instructor classroom-instructor",
+    "build:student": "cross-env BUILD_PATH=build-student PUBLIC_URL=/student REACT_APP_BASE_PATH=/student REACT_APP_API_URL=http://192.168.1.42:5000 REACT_APP_MICROFRONTEND_NAME=classroom-student react-scripts build && node scripts/postbuild-microfrontend.js build-student /student classroom-student",
+    "build:electron-student": "cross-env BUILD_PATH=build-student PUBLIC_URL=. REACT_APP_API_URL=http://192.168.1.42:5000 REACT_APP_MICROFRONTEND_NAME=classroom-student react-scripts build",
+    "build:electron-instructor": "cross-env BUILD_PATH=build-instructor PUBLIC_URL=. REACT_APP_API_URL=http://192.168.1.42:5000 REACT_APP_MICROFRONTEND_NAME=classroom-instructor react-scripts build",
+    "electron:student": "npm run build:electron-student && cross-env ELECTRON_BUILD_TARGET=student electron .",
+    "electron:instructor": "npm run build:electron-instructor && cross-env ELECTRON_BUILD_TARGET=instructor electron .",
+    "dist:student": "npm run build:electron-student && cross-env ELECTRON_BUILD_TARGET=student electron-builder --config electron/builder-student.json --win",
+    "dist:student:nocache": "npx rimraf build-student dist/student node_modules/.cache && npm run dist:student",
+    "dist:instructor": "npm run build:electron-instructor && cross-env ELECTRON_BUILD_TARGET=instructor electron-builder --config electron/builder-instructor.json --win",
+    "dist:instructor:nocache": "npx rimraf build-instructor dist/instructor node_modules/.cache && npm run dist:instructor",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/papaparse": "^5.3.14",
+    "cross-env": "^7.0.3",
+    "electron": "^40.6.0",
+    "electron-builder": "^26.8.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "sass": "^1.99.0"
+  }
+}

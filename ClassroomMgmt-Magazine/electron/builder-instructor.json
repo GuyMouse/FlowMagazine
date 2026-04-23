@@ -1,0 +1,25 @@
+{
+  "appId": "com.flowclassroom.instructor",
+  "productName": "FlowClassroom Instructor",
+  "directories": {
+    "output": "dist/instructor",
+    "buildResources": "buildResources"
+  },
+  "files": [
+    "electron/main.js",
+    "electron/preload.js",
+    "build-instructor/**/*",
+    "package.json"
+  ],
+  "extraMetadata": {
+    "main": "electron/main.js",
+    "buildTarget": "instructor"
+  },
+  "win": {
+    "target": "portable",
+    "icon": "buildResources/icon.ico"
+  },
+  "portable": {
+    "artifactName": "FlowClassroom-Instructor.exe"
+  }
+}

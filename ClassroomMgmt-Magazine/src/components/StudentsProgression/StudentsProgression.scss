@@ -1,0 +1,97 @@
+.students-progression {
+    width: 100%;
+    &--wrapper {
+    }
+
+    .progress-cell {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .completed-badge {
+        color: #27ae60;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+
+    input[type="range"].student-progress-bar {
+        position: relative;
+        user-select: none;
+        pointer-events: none;
+        direction: ltr;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 5px;
+        background: #d3dae7;
+        outline: none;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+
+        &.completed {
+            &::-webkit-slider-thumb {
+                background: #27ae60;
+            }
+        }
+        // &::-webkit-slider-runnable-track {
+        //     background-color: #13bba4;
+        // }
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 5px;
+            height: 15px;
+            background: #224687;
+            cursor: pointer;
+        }
+        // &:before {
+        //     content: attr(data-step);
+        //     // position: absolute;
+        //     // left: 0;
+        //     display: inline-block;
+        //     transform: translate(-100%);
+        // }
+    }
+    .student-current-task {
+        color: #393939;
+        font-size: 1.4rem;
+        font-weight: 400;
+        white-space: nowrap;
+    }
+
+    .grade-badge {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.4rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding: 0.2rem 0.8rem;
+        border-radius: 6px;
+
+        &.passing {
+            color: #27ae60;
+            background: rgba(39, 174, 96, 0.1);
+        }
+
+        &.failing {
+            color: #eb5757;
+            background: rgba(235, 87, 87, 0.1);
+        }
+
+        .grade-detail {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #888;
+        }
+    }
+
+    .grade-pending {
+        color: #bbb;
+        font-size: 1.4rem;
+    }
+
+    &--no-data {
+        font-size: 1.6rem;
+    }
+}

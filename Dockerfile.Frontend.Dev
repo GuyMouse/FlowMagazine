@@ -1,0 +1,23 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Install dependencies first (this layer will be cached)
+# Note: node_modules will be overridden by anonymous volume in docker-compose
+COPY ClassroomMgmt/package*.json ./
+RUN npm ci
+
+# Copy the rest of the source code (this will be overridden by volume in docker-compose)
+COPY ClassroomMgmt/ ./
+
+# Expose the development server port
+EXPOSE 3000
+
+# Set environment variables for React dev server
+ENV HOST=0.0.0.0
+ENV CHOKIDAR_USEPOLLING=true
+ENV WATCHPACK_POLLING=true
+
+# Start the development server
+CMD ["npm", "start"]
+

@@ -1,0 +1,124 @@
+.content-tree {
+    border-radius: 5px;
+    border: 1px solid #b0b0b0;
+    width: 20%;
+    &--wrapper {
+        font-size: 1.2rem;
+        color: #224687;
+        background-color: #fdfdfd;
+        padding: 1.5rem 1.5rem 1.5rem 3rem;
+        height: 100%;
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin: 0;
+            text-align: start;
+        }
+        .tree-node {
+            margin: 5px 0;
+            width: 100%;
+            .node {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: start;
+                border-radius: 2px;
+                font-size: 1.6rem;
+                padding: 5px;
+                user-select: none;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+                &.has-children:has(.arrow.left) ~ .child {
+                    height: 0;
+                    overflow: hidden;
+                }
+                .arrow {
+                    display: inline-block;
+                    transition:
+                        color 0.2s linear,
+                        transform 0.3s ease;
+                    &:hover,
+                    &:focus {
+                        svg path {
+                            fill: #000;
+                        }
+                    }
+                    &.down {
+                        transform: rotate(-90deg);
+                    }
+                    svg {
+                        display: block;
+                        path {
+                            fill: #ddd;
+                            transition: fill 0.2s linear;
+                        }
+                    }
+                }
+                // }
+                &:hover {
+                    background-color: #eef2ff;
+                    font-weight: bold;
+                }
+                &.selected {
+                    background-color: #dee8ff;
+                    font-weight: bold;
+                }
+                &:hover .tree-node--delete-button {
+                    opacity: 1;
+                }
+                &-label {
+                    margin-inline-end: auto;
+                }
+            }
+            &--delete-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                background: none;
+                opacity: 0;
+                cursor: pointer;
+                transition:
+                    opacity 0.2s,
+                    fill 0.2s;
+                border-radius: 4px;
+                &:hover svg {
+                    fill: #ef5350;
+                }
+                svg {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    fill: #d32f2f;
+                }
+            }
+
+            .child {
+                margin-right: 25px;
+                color: black;
+                font-weight: 500;
+            }
+        }
+    }
+    &-nodes {
+        max-height: 50rem;
+        overflow: auto;
+        padding-inline-end: 1rem;
+        direction: ltr;
+        * {
+            direction: rtl;
+        }
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #fff;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #e3e3e3;
+            border-radius: 10px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+}

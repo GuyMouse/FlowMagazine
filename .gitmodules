@@ -1,0 +1,6 @@
+[submodule "ClassroomServer"]
+	path = ClassroomServer
+	url = https://github.com/MouseUX/ClassroomServer.git
+[submodule "ClassroomMgmt"]
+	path = ClassroomMgmt
+	url = https://github.com/MouseUX/ClassroomMgmt.git

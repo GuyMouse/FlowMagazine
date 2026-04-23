@@ -1,0 +1,78 @@
+{
+    "course": {
+        "name": "course name",
+        "status": "status",
+        "status_not_started": "Not Started",
+        "status_in_progress": "In Progress",
+        "status_completed": "Completed",
+        "instructor": "instructor",
+        "instructor_name": "instructor name",
+        "start_training": "Start training",
+        "stop_training": "Stop training",
+        "tabs": {
+            "course_details": "Course details",
+            "students": "Students"
+        },
+        "new_course": "New Course",
+        "students": {
+            "firstname": "First name",
+            "lastname": "Last name",
+            "id": "ID",
+            "station": "Station #",
+            "grade": "Grade",
+            "actions": "Actions",
+            "coursename": "Course Name",
+            "status": "Status",
+            "basename": "Base",
+            "instructor": "Instructor",
+            "studentscount": "Students Count"
+        },
+        "add_or_edit": "Add /Edit Course",
+        "alerts": {
+            "updated": "The Course was updated successfully.",
+            "updated_failed": "Failed to update the Course. Please try again.",
+            "are_you_sure_start_training": "<p>Are you sure you want to <strong>Start</strong> training?</p>",
+            "training_started": "Training started!",
+            "training_start_failed": "Failed to start training",
+            "are_you_sure_stop_training": "<p>Are you sure you want to <strong>Stop</strong> training?</p>",
+            "training_stopped": "Training stopped",
+            "training_stop_failed": "Failed to stop training"
+        }
+    },
+    "training": {
+        "add_or_edit": "Add /Edit Training",
+        "delete_training": "<p>Are you sure you want to <strong>Delete</strong> training?</p>",
+        "training_name": "Training Name",
+        "training_location": "Training Location",
+        "new_training": "New Training",
+        "alerts": {
+            "updated": "The Training was updated successfully.",
+            "updated_failed": "Failed to update the Training. Please try again.",
+            "delete": "The Training was deleted successfully.",
+            "delete_failed": "Failed to deleted the Training. Please try again."
+        }
+    },
+    "login": {
+        "user_name": "Username",
+        "password": "Password",
+        "forgot_password": "Forgot Password?",
+        "password_hint": "Password hint: Childhood nickname",
+        "login": "LOGIN",
+        "one_incorrect": "Username or password is incorrect",
+        "close": "Close"
+    },
+    "missing_data": "Missing Data",
+    "delete": "Delete",
+    "edit": "Edit",
+    "save": "Save",
+    "add": "Add",
+    "cancel": "Cancel",
+    "yes": "Yes",
+    "no": "No",
+    "select_all": "Select all",
+    "alerts": {
+        "something_went_wrong": "Something went wrong!",
+        "success": "The action was successful!",
+        "failed": "The action failed."
+    }
+}

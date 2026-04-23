@@ -1,0 +1,1 @@
+export { default as CopyRights } from "./CopyRights";

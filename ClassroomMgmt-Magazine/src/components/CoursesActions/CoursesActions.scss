@@ -1,0 +1,96 @@
+.courses-actions {
+    &--wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &--filters {
+        display: flex;
+        align-items: flex-end;
+        gap: 3rem;
+    }
+    .search-bar {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .search {
+            height: 4.5rem;
+            color: #000;
+            text-align: right;
+            font-family: "Noto Sans", sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 15px;
+
+            display: flex;
+            width: 24rem;
+            padding: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            // padding-right: 3.5rem;
+            border-radius: 5px;
+            border: 1px solid var(--gray-border, #ddd);
+            background: var(--white, #fff);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            //fill: #888;
+        }
+    }
+
+    .instructor-selector,
+    .status-selector {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        position: relative;
+
+        .select-bar-instructor,
+        .select-bar-status {
+            height: 4.5rem;
+            display: flex;
+            width: 24rem;
+            padding: 1rem;
+            //  justify-content: space-between;
+            // align-items: center;
+
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background: #fff;
+            font-family: "Noto Sans", sans-serif;
+            appearance: none;
+
+            color: #000;
+            text-align: right;
+            font-family: "Noto Sans", sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 15px;
+        }
+
+        .instructor-text,
+        .status-text {
+            color: #b0b0b0;
+            font-size: 1.6rem;
+            text-align: right;
+            width: 100%;
+        }
+
+        .arrow-icon-one {
+            position: absolute;
+            left: 1rem;
+            top: 3.5rem;
+            width: 2.4rem;
+            height: 2.4rem;
+
+            //font-weight: 400;
+            object-fit: contain;
+        }
+    }
+}
