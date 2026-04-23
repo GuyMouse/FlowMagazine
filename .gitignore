@@ -1,3 +1,4 @@
 # Submodules are tracked via .gitmodules
 # Add any other root-level files/folders to ignore here
 /node_modules
+*/node_modules
